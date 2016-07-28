@@ -1,0 +1,14 @@
+<div ng-controller="MainCtrl as main">
+    <table ng-table="main.tableParams" class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th ng-repeat="col in $data[0]">{{col.key}}</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr ng-repeat="row in $data">
+              <td ng-repeat="col in row" >{{col.value}}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
